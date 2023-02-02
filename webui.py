@@ -240,6 +240,7 @@ def webui():
         app.add_middleware(GZipMiddleware, minimum_size=1000)
 
         modules.progress.setup_progress_api(app)
+        modules.progress.setup_current_task_api(app)
 
         if launch_api:
             create_api(app)
