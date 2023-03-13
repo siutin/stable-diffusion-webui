@@ -41,6 +41,12 @@ def add_task_to_queue(id_job):
 last_task_id = None
 last_task_result = None
 
+def reset_last_task_result():
+  global last_task_id
+  global last_task_result
+  last_task_id = None
+  last_task_result = None
+
 def set_last_task_result(id_job, result):
   global last_task_id
   global last_task_result
